@@ -13,9 +13,9 @@ TBD. I have no clue? I think it is kinda like a port opening at a low level
 * STREAM - TCP
 
 #### How does sockets work?
-A small bit of networking background first (I know, eww / oh please no). Consider connecting to a website from your browser. When connecting from a client (e.g. your computer), the client opens a port to connect to the server (website) on port 80 (standard http port number), then proceeds to forward you to a different port to communicate and do other fun business.  
+A small bit of networking background first (I know, eww / oh please no). Consider connecting to a website from your browser. When connecting from a client (e.g. your computer), the client opens a port to connect to the server (website) on port 80 (standard http port number), then proceeds to forward you to a different port to communicate and do other "fun business".  
 
-Sockets works a lot like this. The sockets made in Sockets can work as all three ports in the above example: the client who reaches out to the server, the server who is on a known port and forwards the client to another port, and the other port to do the fun business. 
+Sockets works a lot like this. The sockets made in Sockets can work as all three ports in the above example: the client who reaches out to the server, the server who is on a known port and forwards the client to the "fun business" port, and the "fun business"  port. 
 
 #### How to actually use this module
 ``` python
