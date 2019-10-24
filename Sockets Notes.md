@@ -2,9 +2,9 @@
 ### Darknut82
 
 ### References
-[Sockets Documentation](https://docs.python.org/3/library/socket.html#socket-objects)
-[Sockets Tutorial](https://docs.python.org/3/howto/sockets.html) (It's where most of this has come from tbh)
-[TODO: for the CyberSEED_2019 Geography Remake](https://www.instructables.com/id/Netcat-in-Python/)
+[Sockets Documentation](https://docs.python.org/3/library/socket.html#socket-objects)  
+[Sockets Tutorial](https://docs.python.org/3/howto/sockets.html) (It's where most of this has come from tbh)  
+[TODO: for the CyberSEED_2019 Geography Remake](https://www.instructables.com/id/Netcat-in-Python/)  
 
 ### General
 Most of this information is from around the web, and I do not own it. Maybe I'll cite sources later?  
