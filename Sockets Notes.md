@@ -1,7 +1,16 @@
 # Socket Notes
 ### Darknut82
+
+### References
+[Sockets Documentation](https://docs.python.org/3/library/socket.html#socket-objects)
+[Sockets Tutorial](https://docs.python.org/3/howto/sockets.html) (It's where most of this has come from tbh)
+[TODO: for the CyberSEED_2019 Geography Remake](https://www.instructables.com/id/Netcat-in-Python/)
+
+### General
 Most of this information is from around the web, and I do not own it. Maybe I'll cite sources later?  
 For reference when talking about the concept of sockets, I will leave it as **s**ockets. When refering to the Python module, I will use **S**ockets.
+
+### Theory and Information
 
 #### What is a "socket"
 TBD. I have no clue? I think it is kinda like a port opening at a low level
@@ -17,7 +26,7 @@ A small bit of networking background first (I know, eww / oh please no). Conside
 
 Sockets works a lot like this. The sockets made in Sockets can work as all three ports in the above example: the client who reaches out to the server, the server who is on a known port and forwards the client to the "fun business" port, and the "fun business"  port. 
 
-#### How to actually use this module
+### How to actually use this module
 ``` python
 # Import the Socket module
 import socket
