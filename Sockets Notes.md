@@ -37,5 +37,8 @@ sock.bind( (host_string, port_num) )
 # Listen and allow up to max_num people to connect (usually max_num = 5)
 sock.listen(max_num)
 
-# Running the 
+# Run the server (while true is so it just keeps going)
+while True:
+    # Accept connections
+    (cilentsocket, address) = sock.accept()
 ```
