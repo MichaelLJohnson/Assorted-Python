@@ -1,7 +1,7 @@
 # Socket Notes
 ### Darknut82
 Most of this information is from around the web, and I do not own it. Maybe I'll cite sources later?  
-For reference when talking about the concept of sockets, I will leave it as __*s*__ockets. When refering to the Python module, I will use __*S*__ockets.
+For reference when talking about the concept of sockets, I will leave it as **s**ockets. When refering to the Python module, I will use **S**ockets.
 
 #### What is a "socket"
 TBD. I have no clue? I think it is kinda like a port opening at a low level
