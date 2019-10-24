@@ -48,6 +48,17 @@ sock.listen(max_num)
 
 # Run the server (while true is so it just keeps going)
 while True:
-    # Accept connections
+    # Accept connections and make a new socket to handle a new connection (?)
     (cilentsocket, address) = sock.accept()
+
+    # Create a new thread (kinda like having it do it's own thing off to the side)
+    ct = client_thread(clientsocket)
+    ct.run # Go play little-thread!
 ```
+
+### TODO
+* Check line 51 for accuracy
+* Project time????
+* A CTF Socket Class (for the project of a nc CTF) would be cool
+* .encode() and .decode()
+* .shutdown() and .close()
