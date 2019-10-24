@@ -76,8 +76,13 @@ while True:
     print("nc sent:", byte_data, sep = "\n")
     # TODO Change to a correct strings format
 
-    # TODO break the infinite loop of recieve
+    # the byte data will be 0 if there is a closed connection. Read that as stop.
+    # TODO make the infinite loop of recieve better
+    if byte_data is b'':
+        print("Recieved a 0")
+        break
 
+print("Done.")
 
 # TODO: test bind v. connect
 # TODO: make sure line 34 works
