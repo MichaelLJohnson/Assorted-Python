@@ -16,3 +16,7 @@ So I am probably one of the most forgetful people ever. Also, passing off the "h
 
 ### Finished
 *lol you thought*
+
+### Resuorces
+[Markdown Help](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)  
+[How to add vertical lines to VScode](https://stackoverflow.com/questions/29968499/vertical-rulers-in-visual-studio-code)  
