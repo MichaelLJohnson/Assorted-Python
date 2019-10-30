@@ -14,6 +14,7 @@ receives the first line of text. Not Complete.
 
 Changelog:
     24 Oct: Creation. Made base outline without testing. 
+    30 Oct: Initial Testing. Didn't Work, until changed message string to a bytes string. Added a server message on successful startup.
 """
 
 # Import Socket Module (duh)
@@ -28,13 +29,14 @@ serversock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # Attach the socket to an IP and port. Since I am playing around, definitely do NOT use standard ports
 hostname = '127.0.0.1' # Using localhost as the IP
 port = 8000 # The most similar to 80 with being above 1000
-serversock.connect( (hostname, port) )
+serversock.bind( (hostname, port) )
 
 
 ## Start server-side connection
 
 # okay... my socket is bound to localhost:8000, now wait for a connection
 serversock.listen(1) 
+print("[Alert] Now Listening on {}:{}".format(hostname, port))
 
 # Connection time!
 while True:
@@ -44,20 +46,20 @@ while True:
     # Twofold if statement
     # (1) states that a connection is made and (2) no longer recieves a connection. See Note 1
     if addr is not None:
-        print("Connection with:", addr)
+        print("[Alert] Connection with:", addr)
         break
 
 
 ## Send a message
 
-# Lets send a thing
-message = "Hello World\n" # make sure to send a new line character, it would look silly without
+# Lets send a thing. However, it requires a bytes object :(
+message = bytes("[Server] Hello World!\n", 'utf-8') # make sure to send a new line character, it would look silly without
 
 # Two-part: (1) sends message (2) checks if an error occured. See Note 2
 if funBusiness_sock.sendall(message) is None:
-    print("Message Sent!")
+    print("[Alert] Message Sent!")
 else:
-    print("Errors :(")
+    print("[Error] Errors :(")
     raise RuntimeError("Message not sent successfully")
 
 
@@ -73,16 +75,16 @@ while True:
     byte_data = funBusiness_sock.recv(buffer_size)
 
     # Display the data TODO I am leaving it in bytes to see what type of data nc sends
-    print("nc sent:", byte_data, sep = "\n")
+    print("[Client]", byte_data, sep = " ")
     # TODO Change to a correct strings format
 
     # the byte data will be 0 if there is a closed connection. Read that as stop.
     # TODO make the infinite loop of recieve better
     if byte_data is b'':
-        print("Recieved a 0")
+        print("[Alert] Recieved a 0")
         break
 
-print("Done.")
+print("[Alert] Done.")
 
 # TODO: test bind v. connect
 # TODO: make sure line 34 works
