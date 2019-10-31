@@ -65,13 +65,44 @@ So we have some basics in sockets from the above, right? Now, how _exactly_ do w
 #### What is a "listener"?
 With that stuff out of the way, we start with "What in the world is a 'listener'". To be circular, a listener listens to what is being sent to the port it is listening to. In more clear terms, the listener will accept what is being sent to the port it is listening on, and have it availible for the server-side to process as needed. This would be the first step to constructing a program to ask questions to an user over the wire: having something to (1) ask questions and (2) recieve the answer. 
 
+#### Usage
+1. Run the program. 
+Server:  
+![alt text](https://fake.url "Initial Server Setup")
+
+2. Connect to the program. (I used `nc 127.0.0.1 8000`)
+Server:  
+![alt text](https://fake.url "Netcat Terminal Response")
+Client:  
+![alt text](https://fake.url "Server Accepts the Connection")
+
+3. Send Something! (Not `hello world` since the server said that. Awkward for everyone involved)
+Client:  
+![alt text](https://fake.url "Client Sends Message")
+Server:  
+![alt text](https://fake.url "Server Recieves Message")
+
+4. Close down the connection.
+Client:  
+![alt text](https://fake.url "Client Shuts Down")
+Server:  
+![alt text](https://fake.url "Program Finishes")
+
+| Goal | Server | Client | 
+| ---- | :----: | :----: |
+| Run the program | ![alt text](https://fake.url "Initial Server Setup") |  |
+| Connect to the program. (I used `nc 127.0.0.1 8000`) | ![alt text](https://fake.url "Server Accepts the Connection") | ![alt text](https://fake.url "Netcat Terminal Response") | 
+| Send Something! (Not `hello world` since the server said that. Awkward for everyone involved) | ![alt text](https://fake.url "Server Recieves Message") | ![alt text](https://fake.url "Client Sends Message") | 
+| Close down the connection. | ![alt text](https://fake.url "Program Finishes") | ![alt text](https://fake.url "Client Shuts Down") | 
+
 #### Important Take-a-ways
 First, look at and run through the code. Continue when you have.  
   
 Now, I hope it makes sense all the way until line 46. If not, review the "How this module actually works" Section (or let me know that I write bad). I am going to break it down more-or-less line-by-line for important things. 
-* Line 49: this exploits the output of the {socket object}.accept() method. This is saying as long as addr is not defined, which is set by the accept method, it will NEVER enter into the if statement. Therefore, if something goes wrong and the client is not given a new socket address, the program will not progress.
-* Line 57: I cannot stress this enough, {socket object}.sendall({message}) requires {message} to be a bytes-like object.
+* Line 49: this exploits the output of the `{socket object}.accept()` method. This is saying as long as addr is not defined, which is set by the accept method, it will NEVER enter into the if statement. Therefore, if something goes wrong and the client is not given a new socket address, the program will not progress.
+* Line 57: I cannot stress this enough, `{socket object}.sendall({message})` requires `{message}` to be a bytes-like object.
 * Line 60: This is also like line 48. I am exploiting the fact that the if statement will run the sendall method, then use the result of it to decide if something went wrong. 
+* Line 79: When this runs, a `b'{message}'` string prints. This is as another bytes object was recieved, not necessarily text. But it is, so using `str(bytes_object, 'utf-8')` gives a normal string back
 * Line 82: This is a thing to know about Socket: if the other person's socket is closed, it will recieve the **null byte**. While not prominent in Python, other languages use it a lot, and it is used here. It is also represented as `0x0` in hex or `\0` in escape characters.  
 
 ### Methods
