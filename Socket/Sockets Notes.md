@@ -82,7 +82,7 @@ So we have some basics in sockets from the above, right? Now, how _exactly_ do w
 #### What is a "listener"?
 With that stuff out of the way, we start with "What in the world is a 'listener'". To be circular, a listener listens to what is being sent to the port it is listening to. In more clear terms, the listener will accept what is being sent to the port it is listening on, and have it availible for the server-side to process as needed. This would be the first step to constructing a program to ask questions to an user over the wire: having something to (1) ask questions and (2) recieve the answer. 
 
-#### Usage
+#### Walkthrough
 1. Run the program.  
 Server:  
 ![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server1.png "Initial Server Setup")
@@ -104,14 +104,7 @@ Server:
 Client:  
 ![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_client4.png  "Client Shuts Down")  
 Server:  
-![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server4.png  "Program Finishes")  
-
-| Goal | Client | Server | 
-| ---- | :----: | :----: |
-| Run the program |  | ![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server1.png  "Initial Server Setup") |
-| Connect to the program. (I used `nc 127.0.0.1 8000`) | ![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_client2.png  "Server Accepts the Connection") | ![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server2.png  "Netcat Terminal Response") | 
-| Send Something! (Not `hello world` since the server said that. Awkward for everyone involved) | ![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_client3.png  "Server Recieves Message") | ![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server3.png  "Client Sends Message") | 
-| Close down the connection. | ![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_client4.png  "Program Finishes") | ![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server4.png  "Client Shuts Down") | 
+![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server4.png  "Program Finishes") 
 
 #### Important Take-a-ways
 First, look at and run through the code. Continue when you have.  
