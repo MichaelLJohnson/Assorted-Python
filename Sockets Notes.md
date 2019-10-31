@@ -1,6 +1,14 @@
 # Socket Notes
 ### Darknut82
 
+## Table of Contents
+* [References](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/Sockets%20Notes.md#references) 
+* [General](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/Sockets%20Notes.md#general)
+* [Theory and Information](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/Sockets%20Notes.md#theory-and-information)
+* [Basic Usage](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/Sockets%20Notes.md#how-to-actually-use-this-module)
+* [Example 1](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/Sockets%20Notes.md#example-1-how-to-set-up-a-listener)
+* [Methods](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/Sockets%20Notes.md#methods)
+
 ### References
 [Sockets Documentation](https://docs.python.org/3/library/socket.html#socket-objects)  
 [Sockets Tutorial](https://docs.python.org/3/howto/sockets.html) (It's where most of this has come from tbh)  
