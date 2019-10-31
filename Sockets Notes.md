@@ -66,27 +66,28 @@ So we have some basics in sockets from the above, right? Now, how _exactly_ do w
 With that stuff out of the way, we start with "What in the world is a 'listener'". To be circular, a listener listens to what is being sent to the port it is listening to. In more clear terms, the listener will accept what is being sent to the port it is listening on, and have it availible for the server-side to process as needed. This would be the first step to constructing a program to ask questions to an user over the wire: having something to (1) ask questions and (2) recieve the answer. 
 
 #### Usage
-1. Run the program. 
+1. Run the program.  
 Server:  
 ![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server1.png "Initial Server Setup")
 
-2. Connect to the program. (I used `nc 127.0.0.1 8000`)
-Server:  
-![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_sever2.png  "Netcat Terminal Response")
+2. Connect to the program. (I used `nc 127.0.0.1 8000`)  
 Client:  
-![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_client2.png  "Server Accepts the Connection")
+![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_client2.png  "Server Accepts the Connection")  
+Server:  
+![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server2.png  "Netcat Terminal Response")  
 
-3. Send Something! (Not `hello world` since the server said that. Awkward for everyone involved)
-Client:  
-![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_client3.png  "Client Sends Message")
-Server:  
-![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server3.png  "Server Recieves Message")
 
-4. Close down the connection.
+3. Send Something! (Not `hello world` since the server said that. Awkward for everyone involved)  
 Client:  
-![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_client4.png  "Client Shuts Down")
+![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_client3.png  "Client Sends Message")  
 Server:  
-![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server4.png  "Program Finishes")
+![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server3.png  "Server Recieves Message")  
+
+4. Close down the connection.  
+Client:  
+![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_client4.png  "Client Shuts Down")  
+Server:  
+![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server4.png  "Program Finishes")  
 
 | Goal | Client | Server | 
 | ---- | :----: | :----: |
