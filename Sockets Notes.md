@@ -74,6 +74,16 @@ Now, I hope it makes sense all the way until line 46. If not, review the "How th
 * Line 60: This is also like line 48. I am exploiting the fact that the if statement will run the sendall method, then use the result of it to decide if something went wrong. 
 * Line 82: This is a thing to know about Socket: if the other person's socket is closed, it will recieve the **null byte**. While not prominent in Python, other languages use it a lot, and it is used here. It is also represented as `0x0` in hex or `\0` in escape characters.  
 
+### Methods
+variables that need to be a certain class will be descriptive enough to understand.
+  
+| Method | Description | 
+| :---:  | :----:      |
+| socket_module.socket(socket_type, connection_type) | Sets up a socket with given parameters. Does not start or associate a port to the socket. |
+| socket_object.connect(host_info) | Attaches a one-time socket (needs verification) to the given host and port. host_info is a tuple of the hostname and port, in that order. |
+| socket_oject.bind(host_info) | Attaches a persistent socket (needs verification) to the given host and port. host_info is a tuple of the hostname and port, in that order. |
+| socket_object.listen(max_num) | Sets the socket to listen for up to max_num connections. |
+| socket_object.accept() | Accepts a new connection from a client. Returns a new socket and the address of the client |
 
 ### TODO
 * A CTF Socket Class (for the project of a nc CTF) would be cool
