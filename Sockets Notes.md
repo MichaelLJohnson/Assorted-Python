@@ -9,13 +9,19 @@
 * [Example 1](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/Sockets%20Notes.md#example-1-how-to-set-up-a-listener)
 * [Methods](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/Sockets%20Notes.md#methods)
 
+----
+
 ### References
 [Sockets Documentation](https://docs.python.org/3/library/socket.html#socket-objects)  
 [Sockets Tutorial](https://docs.python.org/3/howto/sockets.html) (It's where most of this has come from tbh)  
 [TODO: for the CyberSEED_2019 Geography Remake](https://www.instructables.com/id/Netcat-in-Python/)  
 
+----
+
 ### General
 For reference when talking about the concept of sockets, I will leave it as **s**ockets. When refering to the Python module, I will use **S**ockets. My use of this module is going to heavily based and aimed towards creating a server to ask questions via a socket, then recieve and analyze the response from the user. Therefore, keep in mind that this is by no means comprehensive, and will only be expanded based off of the specific usage of the module. Also, most of this information is from around the web, and I do not own it. The examples build off of the Sockets Tutorial reference, but is coded by me. 
+
+----
 
 ### Theory and Information
 
@@ -32,6 +38,8 @@ TBD. I have no clue? I think it is kinda like a port opening at a low level
 A small bit of networking background first (I know, eww / oh please no). Consider connecting to a website from your browser. When connecting from a client (e.g. your computer), the client opens a port to connect to the server (website) on port 80 (standard http port number), then proceeds to forward you to a different port to communicate and do other "fun business".  
 
 Sockets works a lot like this. The sockets made in Sockets can work as all three ports in the above example: the client who reaches out to the server, the server who is on a known port and forwards the client to the "fun business" port, and the "fun business"  port. 
+
+----
 
 ### How to actually use this module
 ``` python
@@ -62,6 +70,7 @@ while True:
     ct = client_thread(clientsocket)
     ct.run # Go play little-thread!
 ```
+----
 
 ### Example 1: How to set up a "listener"
 So we have some basics in sockets from the above, right? Now, how _exactly_ do we do this you might ask? Well, buckle up, cause there is a full, working (as of 30 October 2019) example. Some quick caveats to that...  
@@ -114,6 +123,8 @@ Now, I hope it makes sense all the way until line 46. If not, review the "How th
 * Line 79: When this runs, a `b'{message}'` string prints. This is as another bytes object was recieved, not necessarily text. But it is, so using `str(bytes_object, 'utf-8')` gives a normal string back
 * Line 82: This is a thing to know about Socket: if the other person's socket is closed, it will recieve the **null byte**. While not prominent in Python, other languages use it a lot, and it is used here. It is also represented as `0x0` in hex or `\0` in escape characters.  
 
+----
+
 ### Methods
 variables that need to be a certain class will be descriptive enough to understand.
   
@@ -124,6 +135,8 @@ variables that need to be a certain class will be descriptive enough to understa
 | socket_oject.bind(host_info) | Attaches a persistent socket (needs verification) to the given host and port. host_info is a tuple of the hostname and port, in that order. |
 | socket_object.listen(max_num) | Sets the socket to listen for up to max_num connections. |
 | socket_object.accept() | Accepts a new connection from a client. Returns a new socket and the address of the client |
+
+----
 
 ### TODO
 * A CTF Socket Class (for the project of a nc CTF) would be cool
