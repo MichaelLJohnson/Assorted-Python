@@ -68,32 +68,32 @@ With that stuff out of the way, we start with "What in the world is a 'listener'
 #### Usage
 1. Run the program. 
 Server:  
-![alt text](https://fake.url "Initial Server Setup")
+![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server1 "Initial Server Setup")
 
 2. Connect to the program. (I used `nc 127.0.0.1 8000`)
 Server:  
-![alt text](https://fake.url "Netcat Terminal Response")
+![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_sever2 "Netcat Terminal Response")
 Client:  
-![alt text](https://fake.url "Server Accepts the Connection")
+![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_client2 "Server Accepts the Connection")
 
 3. Send Something! (Not `hello world` since the server said that. Awkward for everyone involved)
 Client:  
-![alt text](https://fake.url "Client Sends Message")
+![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_client3 "Client Sends Message")
 Server:  
-![alt text](https://fake.url "Server Recieves Message")
+![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server3 "Server Recieves Message")
 
 4. Close down the connection.
 Client:  
-![alt text](https://fake.url "Client Shuts Down")
+![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_client4 "Client Shuts Down")
 Server:  
-![alt text](https://fake.url "Program Finishes")
+![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server4 "Program Finishes")
 
-| Goal | Server | Client | 
+| Goal | Client | Server | 
 | ---- | :----: | :----: |
-| Run the program | ![alt text](https://fake.url "Initial Server Setup") |  |
-| Connect to the program. (I used `nc 127.0.0.1 8000`) | ![alt text](https://fake.url "Server Accepts the Connection") | ![alt text](https://fake.url "Netcat Terminal Response") | 
-| Send Something! (Not `hello world` since the server said that. Awkward for everyone involved) | ![alt text](https://fake.url "Server Recieves Message") | ![alt text](https://fake.url "Client Sends Message") | 
-| Close down the connection. | ![alt text](https://fake.url "Program Finishes") | ![alt text](https://fake.url "Client Shuts Down") | 
+| Run the program |  | ![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server1 "Initial Server Setup") |
+| Connect to the program. (I used `nc 127.0.0.1 8000`) | ![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_client2 "Server Accepts the Connection") | ![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server2 "Netcat Terminal Response") | 
+| Send Something! (Not `hello world` since the server said that. Awkward for everyone involved) | ![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_client3 "Server Recieves Message") | ![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server3 "Client Sends Message") | 
+| Close down the connection. | ![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_client4 "Program Finishes") | ![alt text](https://github.com/MichaelLJohnson/Assorted-Python/blob/Socket-Ex1/pictures/ex1_server4 "Client Shuts Down") | 
 
 #### Important Take-a-ways
 First, look at and run through the code. Continue when you have.  
