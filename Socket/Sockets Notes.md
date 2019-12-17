@@ -110,6 +110,17 @@ Now, I hope it makes sense all the way until line 46. If not, review the "How th
 
 ----
 
+### Example 2: The Beginnings of a Class
+Now we have a basic understanding of what we would need to do to make a netcat process on a host. This is great, but not super adaptable to anything (rember my rant on robustness?). So we are going to force it to be more robust and compact by forcing it to be put into a class!   
+  
+I am not a great expert on object-oriented programming, but it does have its draw: Modular Code. This definitely helps with the robust programs, as if someone (or you want to later) wants to change a part of code, they need only to got to the module the change is in, and make sure it takes and returns the same output, and now it works. Neat.   
+  
+Remember when I said you should code everything with your hardcoded values in variables. Your pain arrives now if you want to follow along. 
+
+
+
+----
+
 ### Methods
 variables that need to be a certain class will be descriptive enough to understand.
   
